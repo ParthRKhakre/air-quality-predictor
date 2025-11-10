@@ -1,0 +1,9 @@
+# Python bytecode
+*.pyc
+# Environment files
+.env
+# Model artifacts (since model.py can regenerate them)
+rf_air_quality_model.joblib
+model_metrics.txt
+# Data files that may be too large (AirQuality.csv is required but keep this in mind)
+# You MUST commit AirQuality.csv for this project to work on Streamlit Cloud.
