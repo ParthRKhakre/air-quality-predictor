@@ -76,10 +76,10 @@ def app():
         initial_sidebar_state="expanded"
     )
 
-    st.title("🏭 Next-Day Air Quality Predictor (Daily Avg. CO in mg/m³)")
+    st.title("Air Quality Predictor (Daily Avg.CO)")
     st.markdown("""
 This application uses a **Random Forest Regressor** to predict the **Average Carbon Monoxide (CO) concentration** for the **next day**.
-The prediction is based on the average air quality and weather parameters you input for a selected date.
+The prediction is based on the average air quality and weather parameters from sensors as input for a selected date.
 """)
     st.markdown("---")
 
@@ -182,3 +182,4 @@ The prediction is based on the average air quality and weather parameters you in
 if __name__ == '__main__':
 
     app()
+
