@@ -101,7 +101,7 @@ The prediction is based on the average air quality and weather parameters you in
         st.sidebar.info("Model metrics not loaded. Run 'model.py' to generate.")
 
     # --- User Input Section ---
-    st.header("1. Define Day of Prediction")
+    st.header("Define Day of Prediction")
     
     today = date.today()
     selected_date = st.date_input(
@@ -113,7 +113,7 @@ The prediction is based on the average air quality and weather parameters you in
     predicted_date = selected_date + timedelta(days=1)
     st.markdown(f"**Predicted Date:** {predicted_date.strftime('%B %d, %Y')}")
 
-    st.header(f"2. Input Average Parameters for {selected_date.strftime('%B %d, %Y')}")
+    st.header(f"Input Average Parameters for {selected_date.strftime('%B %d, %Y')}")
     
     with st.expander("Parameter Descriptions and Input"):
         cols = st.columns(3)
@@ -133,7 +133,7 @@ The prediction is based on the average air quality and weather parameters you in
                 )
 
     # --- Prediction ---
-    st.header(f"3. Predicted Air Quality for {predicted_date.strftime('%B %d, %Y')}")
+    st.header(f"Predicted Air Quality for {predicted_date.strftime('%B %d, %Y')}")
     if st.button("Predict Next Day CO Concentration"):
         try:
             # Perform prediction
@@ -180,4 +180,5 @@ The prediction is based on the average air quality and weather parameters you in
 
 
 if __name__ == '__main__':
+
     app()
